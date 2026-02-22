@@ -85,3 +85,29 @@ All tests are passing locally. CI integration planned next.
 - Add GitHub Actions CI
 - Extend test coverage
 - Introduce API + UI end-to-end validation
+
+---
+
+## How to Run Tests Locally
+
+Clone the repository:
+
+```bash
+git clone https://github.com/M1krucky/saucedemo-qa-playwright-pytest.git
+cd saucedemo-qa-playwright-pytest
+```
+
+Create virtual environment and install dependencies:
+
+```bash
+python -m venv .venv
+source .venv/Scripts/activate   # Windows (Git Bash)
+pip install -r requirements.txt
+playwright install
+```
+
+Run tests:
+
+```bash
+pytest
+```
