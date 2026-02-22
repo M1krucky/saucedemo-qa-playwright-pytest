@@ -3,6 +3,8 @@
 UI test automation project built to demonstrate practical QA Automation skills and production-style test architecture.
 The project demonstrates real-world test structure using Python, Pytest, Playwright, and Page Object Model (POM).
 
+The automated tests target the public demo e-commerce application: https://www.saucedemo.com/
+
 ---
 
 ## Why this project
