@@ -17,6 +17,7 @@ The focus is not only on writing tests, but on building a maintainable automatio
 - Python
 - Pytest
 - Playwright (sync API)
+- Playwright Pytest plugin
 - Page Object Model (POM)
 - GitHub (CI planned)
 
@@ -74,12 +75,13 @@ Build a job-level UI automation framework demonstrating:
 
 ## Project Status
 
-In progress — Page Object Model migration and CI integration.
+UI automation framework completed with full Page Object Model implementation.
+All tests are passing locally. CI integration planned next.
 
 ---
 
 ## Next Steps
 
-- Complete Page Object Model refactor
 - Add GitHub Actions CI
-- Improve test parametrization
+- Extend test coverage
+- Introduce API + UI end-to-end validation
