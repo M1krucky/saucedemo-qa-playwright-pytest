@@ -1,6 +1,6 @@
 # SauceDemo QA Automation Project (Playwright + Pytest)
 
-UI test automation project built as part of a QA Automation learning and portfolio journey.
+UI test automation project built to demonstrate practical QA Automation skills and production-style test architecture.
 The project demonstrates real-world test structure using Python, Pytest, Playwright, and Page Object Model (POM).
 
 ---
@@ -64,12 +64,52 @@ Build a job-level UI automation framework demonstrating:
 
 ---
 
+## Project Structure
+
+```
+saucedemo-qa-playwright-pytest/
+│
+├── pages/                # Page Object Model classes (UI interactions)
+│   ├── login_page.py
+│   ├── inventory_page.py
+│   ├── product_details_page.py
+│   ├── cart_page.py
+│   ├── checkout_step_one_page.py
+│   ├── checkout_step_two_page.py
+│   └── checkout_complete_page.py
+│
+├── tests/                # Test suite
+│   ├── conftest.py       # shared fixtures (browser setup, login fixture)
+│   └── test_*.py         # UI test scenarios
+│
+├── config.py             # centralized configuration
+├── pytest.ini            # pytest configuration
+├── requirements.txt      # project dependencies
+└── README.md
+```
+
+---
+
 ## Architecture Highlights
 
 - Centralized configuration (`config.py`)
 - Callable login fixture (explicit control of authentication)
-- Incremental migration to Page Object Model
+- Full Page Object Model implementation
 - Tests describe behaviour, page objects handle UI mechanics
+
+---
+
+## Test Scope
+
+The test suite validates core user flows of the SauceDemo application:
+
+- Authentication and access control
+- Product browsing and navigation
+- Cart management
+- Checkout process
+- Session security (logout and protected routes)
+
+Tests focus on behaviour validation while UI interaction logic is encapsulated inside Page Objects.
 
 ---
 
@@ -111,3 +151,5 @@ Run tests:
 ```bash
 pytest
 ```
+
+---
