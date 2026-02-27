@@ -1,5 +1,7 @@
 # SauceDemo QA Automation Project (Playwright + Pytest)
 
+![CI](https://github.com/M1krucky/saucedemo-qa-playwright-pytest/actions/workflows/ci.yml/badge.svg)
+
 UI test automation project built to demonstrate practical QA Automation skills and production-style test architecture.
 The project demonstrates real-world test structure using Python, Pytest, Playwright, and Page Object Model (POM).
 
