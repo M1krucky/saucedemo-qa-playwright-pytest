@@ -117,6 +117,27 @@ Tests focus on behaviour validation while UI interaction logic is encapsulated i
 
 ---
 
+## Test Execution Strategy
+
+Tests are organized using pytest markers to support different execution scopes.
+
+- **Smoke tests** — critical user workflows used for quick validation of core functionality (login, inventory, cart, checkout, logout).
+- **Full test suite** — executed by default and represents regression coverage.
+
+Run only smoke tests:
+
+```bash
+pytest -m smoke
+```
+
+Run full test suite:
+
+```bash
+pytest
+```
+
+---
+
 ## Project Status
 
 UI automation framework completed with full Page Object Model implementation.

@@ -3,8 +3,10 @@ from pages.cart_page import CartPage
 from pages.checkout_step_one_page import CheckoutStepOnePage
 from pages.checkout_step_two_page import CheckoutStepTwoPage
 from pages.checkout_complete_page import CheckoutCompletePage
+import pytest
 
 
+@pytest.mark.smoke
 def test_checkout_happy_path(page, login):
     """Verify a user can successfully complete checkout for a single product."""
     login()  # authenticate user using reusable login fixture

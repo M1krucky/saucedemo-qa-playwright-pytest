@@ -1,6 +1,8 @@
 from pages.inventory_page import InventoryPage
+import pytest
 
 
+@pytest.mark.smoke
 def test_login_positive(page, login):
     """Verify a user can successfully log in and access the inventory page."""
     login()  # authenticate user using reusable login fixture

@@ -1,7 +1,9 @@
 from pages.inventory_page import InventoryPage
 from pages.cart_page import CartPage
+import pytest
 
 
+@pytest.mark.smoke
 def test_add_item_to_cart_updates_badge_and_cart(page, login):
     """Verify adding an item updates the cart badge and the item appears in the cart."""
     login()  # authenticate user using reusable login fixture

@@ -1,7 +1,9 @@
 from pages.inventory_page import InventoryPage
 from pages.login_page import LoginPage
+import pytest
 
 
+@pytest.mark.smoke
 def test_logout_and_inventory_not_accessible_after_logout(page, login):
     """Verify user is logged out and inventory page cannot be accessed after logout."""
     login()  # authenticate user using reusable login fixture

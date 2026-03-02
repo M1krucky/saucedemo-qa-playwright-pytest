@@ -1,6 +1,8 @@
 from pages.inventory_page import InventoryPage
+import pytest
 
 
+@pytest.mark.smoke
 def test_inventory_page_loads(page, login):
     """Verify inventory page loads successfully and displays available products."""
     login()  # authenticate user using reusable login fixture
