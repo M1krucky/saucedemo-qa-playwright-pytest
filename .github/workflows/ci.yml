@@ -31,9 +31,9 @@ jobs:
           mkdir -p reports      # ensure reports folder exists
           pytest -m smoke --junitxml=reports/junit-smoke.xml --html=reports/smoke.html --self-contained-html  # smoke subset + reports
 
-      - name: Run full test suite # full regression coverage (default pytest run)
+      - name: Run regression tests (excluding smoke) # run remaining tests without repeating smoke
         run: |
-          pytest --junitxml=reports/junit-full.xml --html=reports/full.html --self-contained-html   # full suite + reports
+          pytest -m "not smoke" --junitxml=reports/junit-regression.xml --html=reports/regression.html --self-contained-html  # regression remainder + reports
 
       - name: Upload test report
         if: always()

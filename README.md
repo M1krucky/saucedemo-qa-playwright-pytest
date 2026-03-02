@@ -122,12 +122,18 @@ Tests focus on behaviour validation while UI interaction logic is encapsulated i
 Tests are organized using pytest markers to support different execution scopes.
 
 - **Smoke tests** — critical user workflows used for quick validation of core functionality (login, inventory, cart, checkout, logout).
-- **Full test suite** — executed by default and represents regression coverage.
+- **Regression tests** — remaining test scenarios executed after smoke validation.
 
 Run only smoke tests:
 
 ```bash
 pytest -m smoke
+```
+
+Run regression tests only (excluding smoke):
+
+```bash
+pytest -m "not smoke"
 ```
 
 Run full test suite:
@@ -141,15 +147,22 @@ pytest
 ## Project Status
 
 UI automation framework completed with full Page Object Model implementation.
-All tests are passing locally. CI integration planned next.
+
+Continuous Integration (GitHub Actions) is configured to:
+
+- run smoke tests first for fast feedback,
+- execute remaining regression tests,
+- generate and upload JUnit and HTML test reports as artifacts.
+
+All tests are passing locally and in CI.
 
 ---
 
 ## Next Steps
 
-- Add GitHub Actions CI
-- Extend test coverage
 - Introduce API + UI end-to-end validation
+- Improve failure diagnostics (e.g., screenshots on failure)
+- Extend test coverage
 
 ---
 
