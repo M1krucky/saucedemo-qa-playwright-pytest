@@ -23,7 +23,7 @@ The focus is not only on writing tests, but on building a maintainable automatio
 - Playwright (sync API)
 - Playwright Pytest plugin
 - Page Object Model (POM)
-- GitHub (CI planned)
+- GitHub Actions (CI)
 
 ---
 
@@ -151,8 +151,9 @@ UI automation framework completed with full Page Object Model implementation.
 Continuous Integration (GitHub Actions) is configured to:
 
 - run smoke tests first for fast feedback,
-- execute remaining regression tests,
-- generate and upload JUnit and HTML test reports as artifacts.
+- execute remaining regression tests (excluding smoke),
+- generate and upload JUnit and HTML test reports as artifacts,
+- capture full-page screenshots automatically on test failure.
 
 All tests are passing locally and in CI.
 
@@ -161,7 +162,6 @@ All tests are passing locally and in CI.
 ## Next Steps
 
 - Introduce API + UI end-to-end validation
-- Improve failure diagnostics (e.g., screenshots on failure)
 - Extend test coverage
 
 ---
