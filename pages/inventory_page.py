@@ -32,7 +32,8 @@ class InventoryPage:
         expect(self.title).to_have_text("Products")  # confirms inventory page is displayed
 
     def assert_has_items(self, min_count: int = 1) -> None:
-        expect(self.items.first).to_be_visible()  # at least one product is visible
+        actual_count = self.items.count()  # get current number of inventory items
+        assert actual_count >= min_count, (f"Expected at least {min_count} items, but found {actual_count}")
 
     def assert_cart_badge(self, expected_count: int) -> None:
         expect(self.cart_badge).to_have_text(str(expected_count))  # verify cart item count
