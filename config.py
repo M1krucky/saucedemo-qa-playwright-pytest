@@ -5,7 +5,6 @@ Loads environment-specific settings for the SauceDemo application.
 Environment variables allow overriding default values for CI or local runs.
 """
 
-
 import os
 
 BASE_URL = os.getenv("SAUCE_BASE_URL", "https://www.saucedemo.com/")
