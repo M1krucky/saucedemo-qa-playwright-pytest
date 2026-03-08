@@ -43,9 +43,10 @@ Build a job-level UI automation framework demonstrating:
 ### Authentication
 
 - Positive login
-- Wrong password
-- Empty fields validation
-- Locked user
+- Negative login scenarios (parametrized):
+  - empty credentials
+  - wrong password
+  - locked user
 
 ### Inventory
 
@@ -161,7 +162,6 @@ All tests are passing locally and in CI.
 
 ## Next Steps
 
-- Introduce API + UI end-to-end validation
 - Extend test coverage
 
 ---
